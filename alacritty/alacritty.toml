@@ -1,0 +1,64 @@
+import = [
+    "~/.config/alacritty/themes/themes/github_dark_high_contrast.toml"
+]
+
+[cursor]
+style = { shape = "Block", blinking = "Always" }
+blink_interval = 500
+
+[font]
+size = 12
+
+[font.bold]
+#family = "Unifont"
+#family = "Iosevka Term Nerd Font"
+family = "ZedMono NF Extd Med"
+style = "Bold"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+#family = "Unifont"
+#family = "Iosevka Term Nerd Font"
+family = "ZedMono NF Extd Med"
+style = "Italic"
+
+[font.normal]
+#family = "Unifont"
+#family = "Iosevka Term Nerd Font"
+family = "ZedMono NF Extd Med"
+style = "Regular"
+
+[font.offset]
+x = 0
+y = 0
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Control|Shift"
+
+#[mouse.url]
+#launcher = "xdg-open"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[window]
+opacity = 1
+
+# [window.dimensions]
+# columns = 80
+# lines = 24
+
+[window.padding]
+x = 0
+y = 0
