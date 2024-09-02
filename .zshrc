@@ -35,7 +35,7 @@ autoload -U colors && colors
 source ~/bash-scripts/git-prompt.sh
 
 prompt () {
-    PS1="%n@%m %{$fg[yellow]%}%3~%{$reset_color%}%{$fg[red]%}$(__git_ps1 " (%s)")%{$reset_color%}%(!.#.$)%(?.. [%?]) "
+    PS1="%n@%m %3~%{$fg[red]%}$(__git_ps1 " (%s)")%{$reset_color%}%(!.#.$)%(?.. [%?]) "
 }
 
 precmd_functions+=(prompt)
@@ -74,9 +74,10 @@ typeset -U path                 # keep duplicates out of the path
 # path+=(.)                       # append current directory to path (controversial)
 
 # BINDKEY
-bindkey -e
 bindkey '\e[3~' delete-char
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 bindkey ' '  magic-space
+bindkey '^[[1;3C' forward-word
+bindkey '^[[1;3D' backward-word
 

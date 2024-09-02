@@ -1,18 +1,20 @@
 import = [
-    "~/.config/alacritty/themes/themes/github_dark_high_contrast.toml"
+    "~/.config/alacritty/themes/themes/xterm.toml"
 ]
+
+[colors.primary]
+background = '#000000'
 
 [cursor]
 style = { shape = "Block", blinking = "Always" }
 blink_interval = 500
 
 [font]
-size = 12
+size = 13
 
 [font.bold]
-#family = "Unifont"
-#family = "Iosevka Term Nerd Font"
-family = "ZedMono NF Extd Med"
+#family = "ZedMono NF Extd"
+family = "FiraCode NerdFont"
 style = "Bold"
 
 [font.glyph_offset]
@@ -20,15 +22,13 @@ x = 0
 y = 0
 
 [font.italic]
-#family = "Unifont"
-#family = "Iosevka Term Nerd Font"
-family = "ZedMono NF Extd Med"
+#family = "ZedMono NF Extd"
+family = "FiraCode NerdFont"
 style = "Italic"
 
 [font.normal]
-#family = "Unifont"
-#family = "Iosevka Term Nerd Font"
-family = "ZedMono NF Extd Med"
+#family = "ZedMono NF Extd"
+family = "FiraCode NerdFont"
 style = "Regular"
 
 [font.offset]
@@ -53,7 +53,7 @@ history = 10000
 multiplier = 3
 
 [window]
-opacity = 1
+opacity = 0.9
 
 # [window.dimensions]
 # columns = 80

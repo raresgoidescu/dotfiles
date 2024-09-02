@@ -1,0 +1,34 @@
+[Colors:View]
+BackgroundNormal=#333333
+
+[CompactMode]
+IconSize=32
+MaximumTextWidthIndex=1
+
+[ContentDisplay]
+UsePermissionsFormat=CombinedFormat
+UseShortRelativeDates=false
+
+[DetailsMode]
+IconSize=22
+PreviewSize=22
+
+[General]
+CloseActiveSplitView=false
+RememberOpenedTabs=false
+Version=202
+ViewPropsTimestamp=2024,8,18,18,0,38.48
+
+[IconsMode]
+IconSize=48
+
+[KFileDialog Settings]
+Places Icons Auto-resize=false
+Places Icons Static Size=22
+
+[MainWindow]
+MenuBar=Disabled
+ToolBarsMovable=Disabled
+
+[PreviewSettings]
+Plugins=appimagethumbnail,audiothumbnail,comicbookthumbnail,cursorthumbnail,djvuthumbnail,ebookthumbnail,exrthumbnail,directorythumbnail,imagethumbnail,jpegthumbnail,kraorathumbnail,windowsexethumbnail,windowsimagethumbnail,opendocumentthumbnail,svgthumbnail,textthumbnail

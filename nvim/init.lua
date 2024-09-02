@@ -105,5 +105,14 @@ require 'lazy-bootstrap'
 -- [[ Configure and install plugins ]]
 require 'lazy-plugins'
 
+-- vim.cmd[[set background=light]]
+vim.cmd.colorscheme 'vividchalk'
+
+-- You can configure highlights by doing something like:
+vim.cmd.hi 'Comment gui=none'
+
+vim.api.nvim_set_hl(0, 'Normal', { bg = 'none' })
+vim.api.nvim_set_hl(0, 'NormalFloat', { bg = 'none' })
+
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
