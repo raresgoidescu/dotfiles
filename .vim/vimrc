@@ -1,0 +1,93 @@
+set t_Co=256
+" colorscheme maxcantors
+
+" enter the new age lol
+let g:mapleader=" "
+
+" sane defaults
+set ruler
+set laststatus=2
+set showcmd
+set wildmenu
+set colorcolumn=80
+set scrolloff=8
+
+" personal pref
+set number relativenumber
+set path+=**
+syntax enable
+filetype on
+
+" tab settings
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smarttab
+
+" autoindent
+set autoindent
+filetype indent on
+
+" netrw settings
+let g:netrw_banner=0        " disable the netrw giant banner
+let g:netrw_altv=1          " open splits to the right
+let g:netrw_liststyle=3     " tree view
+
+" highlight search results
+set hlsearch    " 
+set incsearch   " 
+set magic       " turn on REGEX
+
+" Plugins
+runtime macros/matchit.vim
+
+call plug#begin()
+    " vim-lsp & autocompletion
+    Plug 'prabirshrestha/vim-lsp'
+    Plug 'mattn/vim-lsp-settings'
+    Plug 'prabirshrestha/asyncomplete.vim'
+    Plug 'prabirshrestha/asyncomplete-lsp.vim'
+
+    " vim-surround: s is a text-object for delimiters; ss linewise
+    " ys to add surround
+    Plug 'tpope/vim-surround'
+    
+    " vim-commentary: gc is an operator to toggle comments; gcc linewise
+    Plug 'tpope/vim-commentary'
+
+    " git plugin
+    Plug 'tpope/vim-fugitive'
+    " git signs
+    " Plug 'airblade/vim-gitgutter'
+    
+    " really fast motions
+    Plug 'easymotion/vim-easymotion'
+
+    " fuzzy finder <3
+    Plug 'junegunn/fzf.vim'
+call plug#end()
+
+" LSP Mappings
+nmap <silent> gd <Plug>(lsp-definition)
+nmap <silent> gr <Plug>(lsp-references)
+nmap <silent> gi <Plug>(lsp-implementation)
+nmap <silent> K <Plug>(lsp-hover)
+nmap <silent> <leader>rn <Plug>(lsp-rename)
+nmap <silent> [g <Plug>(lsp-previous-diagnostic)
+nmap <silent> ]g <Plug>(lsp-next-diagnostic)
+
+" Move lines|blocks up|down with Alt+k|j
+nnoremap <silent> <M-Up>   :<C-u>move-2<CR>==
+nnoremap <silent> <M-Down> :<C-u>move+<CR>==
+xnoremap <silent> <M-Up>   :move-2<CR>gv=gv
+xnoremap <silent> <M-Down> :move'>+<CR>gv=gv
+
+" Fuzzy Find
+nnoremap <silent> <C-p> :Files<CR>
+
+" Always use bash syntax for sh filetype
+let g:is_bash=1
+
+" Snips
+nnoremap ,sort :-1read $HOME/.vim/.qsort.cpp<CR>1j2wi
+

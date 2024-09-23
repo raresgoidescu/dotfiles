@@ -12,6 +12,7 @@ else
 fi
 
 # Aliases
+alias open="xdg-open"
 alias ls="ls ${lsflags}"
 alias ll="ls ${lsflags} -l"
 alias la="ls ${lsflags} -la"
@@ -35,7 +36,9 @@ autoload -U colors && colors
 source ~/bash-scripts/git-prompt.sh
 
 prompt () {
-    PS1="%n@%m %3~%{$fg[red]%}$(__git_ps1 " (%s)")%{$reset_color%}%(!.#.$)%(?.. [%?]) "
+    # PS1="%n@%m %3~%{$fg[blue]%}$(__git_ps1 " (%s)")%{$reset_color%}%(!.#.%%)%(?.. [%?]) "
+    PS1="%n@%m %3~%{$fg_bold[blue]%}$(__git_ps1 ' (%s)')%{$reset_color%} %(!.#.%%)%(?.. [%?]) "
+
 }
 
 precmd_functions+=(prompt)
