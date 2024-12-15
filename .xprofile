@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+
+echo "Setting up touchpad..."
+xinput set-prop 11 "libinput Tapping Enabled" 1
+xinput set-prop 11 "libinput Natural Scrolling Enabled" 1
+
+echo "Setting up background..."
+# xsetroot -solid black
+feh --no-fehbg --bg-fill --randomize ~/Pictures/speedhunters/mw_bmw_3.jpg
+
+echo "Setting up display..."
+xrandr --output DP-2 --primary
+xrandr --dpi 96
+
+echo "Starting services..."
+slstatus 2>&1 &
+dunst 2>&1 &
+redshift -l 44.44:26.10 -t 5700:3600 &
+xss-lock -- slock &
+
+# For nm-applet, remove output redirection to see errors
+echo "Starting network manager applet..."
+nm-applet &
