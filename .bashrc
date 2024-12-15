@@ -10,8 +10,8 @@ RED="\[\e[1;38;5;9m\]"
 BLUE="\[\e[1;38;5;4m\]"
 RESET="\[\033[0m\]"
 
-source ~/.config/env_vars
-source ~/bash-scripts/git-prompt.sh
+source ~/.env_vars
+source ~/.git-prompt.sh
 export PROMPT_DIRTRIM=2
 
 ps1_prompt() {
